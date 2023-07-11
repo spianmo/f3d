@@ -52,4 +52,4 @@ runs:
     - name: Copy to install
       working-directory: ${{github.workspace}}/dependencies/openexr_install
       shell: bash
-      run: cp -r ./* ../install/
+      run: cp -r ./* ./install/

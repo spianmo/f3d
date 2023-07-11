@@ -66,4 +66,4 @@ runs:
     - name: Copy to install
       working-directory: ${{github.workspace}}/dependencies/occt_install
       shell: bash
-      run: cp -r ./* ../install/
+      run: cp -r ./* ./install/
