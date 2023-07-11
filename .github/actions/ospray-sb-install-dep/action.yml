@@ -65,7 +65,7 @@ runs:
       shell: bash
       run: cmake --build . --parallel 2 --config Release
 
-    - name: Copy to install
-      working-directory: ${{github.workspace}}/dependencies/ospray_install
-      shell: bash
-      run: cp -r ./* ../install/
+#    - name: Copy to install
+#      working-directory: ${{github.workspace}}/dependencies/ospray_install
+#      shell: bash
+#      run: cp -r ./* ../install/
