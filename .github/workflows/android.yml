@@ -73,3 +73,9 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}/build
       run: cmake --build . --parallel 2 --target install
+      
+    - name: Archieve SDK
+      uses: actions/upload-artifact@v3
+      with:
+        name: f3d-${{ matrix.config }}
+        path: /__w/f3d/f3d/build/../install/
