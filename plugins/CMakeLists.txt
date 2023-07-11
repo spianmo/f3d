@@ -1,8 +1,8 @@
-option(F3D_PLUGIN_BUILD_ALEMBIC "Alembic plugin (ABC files)" ON)
+option(F3D_PLUGIN_BUILD_ALEMBIC "Alembic plugin (ABC files)" OFF)
 option(F3D_PLUGIN_BUILD_ASSIMP "Assimp plugin (FBX, OFF, DAE anf DXF files)" ON)
-option(F3D_PLUGIN_BUILD_DRACO "Draco plugin (DRC files)" ON)
+option(F3D_PLUGIN_BUILD_DRACO "Draco plugin (DRC files)" OFF)
 option(F3D_PLUGIN_BUILD_EXODUS "ExodusII plugin (EX2 files)" ON)
-option(F3D_PLUGIN_BUILD_OCCT "OpenCASCADE plugin (STEP and IGES files)" ON)
+option(F3D_PLUGIN_BUILD_OCCT "OpenCASCADE plugin (STEP and IGES files)" OFF)
 
 add_subdirectory(native)
 
