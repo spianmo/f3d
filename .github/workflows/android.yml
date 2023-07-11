@@ -1,11 +1,9 @@
 name: android
 
 on:
-  pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
   push:
-    branches:
-      - master
+  schedule:
+    - cron: '0 9 */3 * *'
 
 concurrency:
   group: '${{ github.workflow }}-${{ github.ref_name }}'
