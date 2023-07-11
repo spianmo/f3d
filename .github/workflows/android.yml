@@ -78,4 +78,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: f3d-${{ matrix.config }}
-        path: /__w/f3d/f3d/build/../install/
+        path: /__w/f3d/f3d/install/
