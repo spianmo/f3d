@@ -34,9 +34,6 @@ jobs:
       working-directory: ${{github.workspace}}
       run: |
         mkdir dependencies
-        cd dependencies
-        mkdir install
-        cd ..
 
     - name: Install NDK
       working-directory: ${{github.workspace}}
@@ -53,17 +50,17 @@ jobs:
         arch: ${{matrix.arch}}
         api_level: ${{env.API_LEVEL}}
 
-    - name: Setup Directories
-      working-directory: ${{github.workspace}}
-      run: |
-         mkdir build
-         mkdir install
-
     - name: Install F3D dependencies
       uses: ./source/.github/actions/f3d-dependencies
       with:
         arch: ${{matrix.arch}}
         api_level: ${{env.API_LEVEL}}
+
+    - name: Setup Directories
+      working-directory: ${{github.workspace}}
+      run: |
+         mkdir build
+         mkdir install
 
     - name: Configure
       working-directory: ${{github.workspace}}/build
@@ -83,7 +80,7 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}/build
       run: cmake --build . --parallel 2 --target install
-      
+
     - name: Archieve SDK
       uses: actions/upload-artifact@v3
       with:
