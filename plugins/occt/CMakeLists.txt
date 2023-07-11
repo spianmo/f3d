@@ -1,11 +1,11 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.19)
 
 project(f3d-plugin-occt)
 
 include(GNUInstallDirs)
 
 # Check if the plugin is built externally
-if(PROJECT_IS_TOP_LEVEL)
+if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
   find_package(f3d REQUIRED)
 else()
   include(f3dPlugin)

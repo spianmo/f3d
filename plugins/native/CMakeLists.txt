@@ -1,11 +1,5 @@
-cmake_minimum_required(VERSION 3.21)
-
-project(f3d-plugin-native)
-
-include(GNUInstallDirs)
-
 # Only internal build is supported for static plugins
-if(PROJECT_IS_TOP_LEVEL)
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
   message(FATAL_ERROR "native plugin cannot be built externally")
 endif()
 
