@@ -43,9 +43,9 @@ math(EXPR F3D_SYSTEM_PROCESSOR "8 * ${CMAKE_SIZEOF_VOID_P}")
 set(F3D_SYSTEM_PROCESSOR "${F3D_SYSTEM_PROCESSOR}-bits")
 
 # Modules
-option(F3D_MODULE_EXTERNAL_RENDERING "External rendering module" OFF)
-option(F3D_MODULE_RAYTRACING "Raytracing module" OFF)
-option(F3D_MODULE_EXR "OpenEXR images module" OFF)
+option(F3D_MODULE_EXTERNAL_RENDERING "External rendering module" ON)
+option(F3D_MODULE_RAYTRACING "Raytracing module" ON)
+option(F3D_MODULE_EXR "OpenEXR images module" ON)
 
 # Use externals
 option(F3D_USE_EXTERNAL_CXXOPTS "Use external cxxopts dependency" OFF)
@@ -207,7 +207,7 @@ if(F3D_BINDINGS_PYTHON)
 endif()
 
 # JNI bindings
-option(F3D_BINDINGS_JAVA "Create Java bindings" OFF)
+option(F3D_BINDINGS_JAVA "Create Java bindings" ON)
 if(F3D_BINDINGS_JAVA)
   add_subdirectory(java)
 endif()
