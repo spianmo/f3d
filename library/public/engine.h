@@ -117,8 +117,8 @@ public:
    * Then try to load a plugin by its name looking into the provided plugin search paths.
    * Then try to load a plugin by its name relying on internal system (eg: LD_LIBRARY_PATH).
    * The plugin "native" is always available and includes native VTK readers.
-   * If built and available in your build, F3D is providing 5 additional plugins:
-   * "alembic", "assimp", "draco", "exodus", "occt".
+   * If built and available in your build, F3D is providing 4 additional plugins:
+   * "alembic", "assimp", "exodus" and "occt".
    * Custom plugins can also be available that F3D is not supporting officially.
    * Throw a plugin_exception if the plugin can't be loaded for some reason.
    */
