@@ -49,6 +49,12 @@ jobs:
         arch: ${{matrix.arch}}
         api_level: ${{env.API_LEVEL}}
 
+    - name: Install F3D dependencies
+      uses: ./source/.github/actions/f3d-dependencies
+      with:
+        arch: ${{matrix.arch}}
+        api_level: ${{env.API_LEVEL}}
+
     - name: Setup Directories
       working-directory: ${{github.workspace}}
       run: |
